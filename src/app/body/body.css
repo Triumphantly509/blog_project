@@ -1,0 +1,20 @@
+.body {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.card {
+    height: 100%;
+    /* makes all cards stretch equally */
+    border: 1px solid #ddd;
+    /* pale gray border */
+    border-radius: 5px;
+    /* soft corners */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* content spaced evenly */
+}
