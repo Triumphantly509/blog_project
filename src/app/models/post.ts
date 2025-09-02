@@ -3,4 +3,6 @@ export interface Post {
     title: string;
     content: string;
     date_published: string;
+    image?: string;
+
 }

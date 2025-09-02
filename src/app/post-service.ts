@@ -8,7 +8,7 @@ import { Post } from './models/post';
 })
 export class PostService {
 
-  private apiUrl = 'http://100.106.80.116:8000/api/list-posts/';
+  private apiUrl = 'http://127.0.0.1:8000/api/list-posts/';
 
   constructor(private http: HttpClient) { }
 

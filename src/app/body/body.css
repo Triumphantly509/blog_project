@@ -1,20 +1,33 @@
-.body {
-    width: 90%;
-    margin: 20px auto;
+.blog-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-    height: 100%;
-    /* makes all cards stretch equally */
-    border: 1px solid #ddd;
-    /* pale gray border */
-    border-radius: 5px;
-    /* soft corners */
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
 }
 
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* content spaced evenly */
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
+
+.body.container {
+  max-width: 1200px; /* aligns with header/footer */
+  margin: 0 auto;
+  padding: 50px 15px; /* increased top and bottom padding */
+}
+
+/* Optional: maintain spacing between rows (already g-4 in Bootstrap) */
+.row.g-4 {
+  margin-top: 0; /* rows already spaced by Bootstrap gutter */
+}
+
