@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -29,7 +29,10 @@
     "@angular/platform-browser": "^20.2.0",
     "@angular/router": "^20.2.0",
     "bootstrap": "^5.3.8",
+    "crypto-browserify": "^3.12.1",
+    "crypto-js": "^4.2.0",
     "rxjs": "~7.8.0",
+    "stream-browserify": "^3.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

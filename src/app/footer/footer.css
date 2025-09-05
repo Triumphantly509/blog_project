@@ -1,24 +1,16 @@
-.footer {
-    background-color: #f0f0f0;
-    color: #000;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 1rem;
-    border-top: 1px solid #ddd;
-    width: 100%;
-    box-sizing: border-box;
+footer {
+  background: var(--teal);
+  color: var(--white);
+  display: flex;              /* enable flexbox */
+  justify-content: center;    /* horizontal centering */
+  align-items: center;        /* vertical centering */
+  min-height: 60px;           /* ensures some height */
+  margin-top: 20px;
+  padding: 0 1rem;
 }
 
-
-/* Responsive font sizes */
-@media (max-width: 768px) {
-    .footer p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer p {
-        font-size: 0.8rem;
-    }
+footer p {
+  margin: 0;                  /* remove default paragraph margin */
+  line-height: 1.5;           /* cleaner vertical rhythm */
+  font-size: 1rem;            /* optional: adjust size */
 }
