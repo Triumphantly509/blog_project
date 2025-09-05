@@ -25,6 +25,20 @@
   border-top-right-radius: 12px;
 }
 
+.ad-space {
+  background: var(--pale-aqua);
+  border: 2px dashed var(--teal);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-color);
+  height: 200px;       
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin: 20px 0;
+}
+
 
 
 
