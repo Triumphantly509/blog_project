@@ -7,6 +7,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './footer.html',
   styleUrls: ['./footer.css']
 })
-export class Footer {
+export class FooterComponent {
 
 }

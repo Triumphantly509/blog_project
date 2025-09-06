@@ -6,7 +6,10 @@
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text">
-            {{ post.content | slice:0:100 }}<span *ngIf="post.content.length > 100">...</span>
+            {{ post.content | slice:0:50 }}
+            <span *ngIf="post.content.length > 50">...
+              <a [routerLink]="['/post', post.id]" class="read-more">Read more</a>
+            </span>
           </p>
           <div class="mt-auto">
             <small class="text-muted">{{ post.date_published | date:'mediumDate' }}</small>

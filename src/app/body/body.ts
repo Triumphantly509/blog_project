@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostService } from '../post-service';
 import { Post } from '../models/post';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-body',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './body.html',
   styleUrls: ['./body.css']
 })
