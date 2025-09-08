@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PostService } from '../post-service';
 import { Post } from '../models/post';
 import { RouterModule } from '@angular/router';
-
+import { StripHtmlPipe } from '../pipes/strip-html-pipe';
 
 @Component({
   selector: 'app-body',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, StripHtmlPipe],
   templateUrl: './body.html',
   styleUrls: ['./body.css']
 })

@@ -1,27 +1,34 @@
-<div *ngIf="isLoading" class="text-center py-10">Loading...</div>
-
-<div *ngIf="post" class="post-detail container mx-auto px-4 py-10">
-  <!-- Featured Image -->
- <div class="post-header">
-  <img *ngIf="post.image" [src]="post.image" alt="{{ post.title }}">
+<div *ngIf="isLoading" class="text-center py-10">
+  Loading...
 </div>
 
-
-  <!-- Post Content -->
-  <div class="post-content mx-auto">
-    <h1 class="post-title">{{ post.title }}</h1>
-
-    <!-- Meta -->
-    <div class="post-meta text-muted mb-4">
-      {{ post.date_published | date:'longDate' }} · By Admin
+<div *ngIf="post" class="post-detail container">
+  <!-- Wrapper for header + content -->
+  <div class="post-wrapper">
+    <!-- Featured Image -->
+    <div class="post-header">
+      <img
+        *ngIf="post.header_image"
+        [src]="post.header_image"
+        alt="{{ post.title }}"
+      />
     </div>
 
-    <!-- Render post body with multiple paragraphs/headings/images -->
-    <div class="post-body" [innerHTML]="post.content"></div>
+    <!-- Post Content (card same width as header) -->
+    <div class="post-content">
+      <h1 class="post-title">
+        {{ post.title }}
+      </h1>
 
-    <!-- Back Button -->
-    <div class="mt-5">
-      <a routerLink="/" class="btn-back">← Back to Posts</a>
+      <!-- Post Body -->
+      <div class="post-body" [innerHTML]="post.content"></div>
+
+      <!-- Back Button -->
+      <div class="back-btn">
+        <a routerLink="/" class="btn-back">
+          ← Back to Posts
+        </a>
+      </div>
     </div>
   </div>
 </div>
