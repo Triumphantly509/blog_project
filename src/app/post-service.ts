@@ -12,8 +12,8 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiUrl);
+  getPosts(page: number = 1, pageSize: number = 5) {
+    return this.http.get<any>(`${this.apiUrl}?page=${page}&page_size=${pageSize}`);
   }
   getPostById(id: number): Observable<Post> {
     return this.http.get<Post>(`${this.apiUrl}${id}/`);
